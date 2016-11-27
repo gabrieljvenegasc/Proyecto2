@@ -31,10 +31,9 @@ public abstract class Template {
     protected boolean isBibliographyVariable;
 
 
-
-    public Template clone() {
-        // TODO implement here
-        return null;
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone(); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
