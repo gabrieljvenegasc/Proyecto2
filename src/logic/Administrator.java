@@ -10,11 +10,11 @@ public class Administrator extends User implements Observable {
 
 
     public void registerObserver(Observer pObserver) {
-        // TODO implement here
+        this.observerCollection.add(pObserver);
     }
 
     public void deleteObserver(Observer pObserver) {
-        // TODO implement here
+        this.observerCollection.remove(pObserver);
     }
 
     public void notifyObservers() {
