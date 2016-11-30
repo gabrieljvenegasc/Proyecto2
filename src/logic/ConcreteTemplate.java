@@ -8,8 +8,8 @@ public class ConcreteTemplate extends Template {
     public ConcreteTemplate() {
     }
 
-    private List<Object> templateState;
-
+    private ArrayList<Object> templateState;
+    
 
 
     public void setState() {
@@ -18,12 +18,27 @@ public class ConcreteTemplate extends Template {
 
     public List<Object> getState() {
         // TODO implement here
-        return null;
+        return templateState;
     }
 
     public Memento saveStateToMemento() {
-        // TODO implement here
-        return null;
+        ArrayList<Object> currentState=new ArrayList<>();
+        
+        currentState.add(this.bibliography);
+        currentState.add(this.evaluation);
+        currentState.add(this.filename);
+        currentState.add(this.generalDescription);
+        currentState.add(this.generalObjectives);
+        currentState.add(this.isBibliographyVariable);
+        currentState.add(this.isEvaluationVariable);
+        currentState.add(this.isMethodologyVariable);
+        currentState.add(this.methodology);
+        currentState.add(this.specificObjectives);
+        currentState.add(this.thematicContent);
+        
+        Memento memento=new Memento(currentState);
+        
+        return memento;
     }
 
     public void getStateFromMemento() {

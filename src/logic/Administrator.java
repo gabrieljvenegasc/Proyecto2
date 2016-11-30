@@ -20,5 +20,13 @@ public class Administrator extends User implements Observable {
     public void notifyObservers() {
         // TODO implement here
     }
+    
+    @Override
+    public void newTemplate()
+    {
+        //Método que crea una plantilla nueva con los permisos del administrador
+        
+        
+    }
 
 }

@@ -5,7 +5,9 @@ import java.util.*;
 
 public class Carreer {
 
-    public Carreer() {
+    public Carreer()
+    {
+        
     }
 
     private String name;
@@ -14,7 +16,7 @@ public class Carreer {
 
     private int curriculum;
 
-
+    private ArrayList<Course> courses;
 
 
 }

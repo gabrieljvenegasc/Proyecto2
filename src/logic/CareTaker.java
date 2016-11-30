@@ -4,20 +4,23 @@ package logic;
 import java.util.*;
 
 public class CareTaker {
+    public ArrayList<Memento> mementoList;
 
     public CareTaker() {
+        mementoList=new ArrayList<Memento>();
     }
 
-    public List<Memento> mementoList;
 
 
-    public void add() {
-        // TODO implement here
+    public void add(Memento pMemento)
+    {
+        this.mementoList.add(pMemento);
     }
 
-    public Memento get() {
-        // TODO implement here
-        return null;
+    public Memento get(int pIndex)
+    {
+        
+        return mementoList.get(pIndex);
     }
 
 }
